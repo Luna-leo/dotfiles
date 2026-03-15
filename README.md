@@ -20,18 +20,18 @@ git clone https://github.com/yourname/dotfiles.git ~/dotfiles
 
 ### 2. セットアップスクリプトを実行
 
-**管理者権限の PowerShell** で:
-
 ```powershell
 cd ~/dotfiles
 .\setup.ps1
 ```
 
+> **管理者権限は不要です。** 設定ファイルの配置はシンボリックリンク → ハードリンク → コピーの順にフォールバックします。
+
 以下が自動で行われます:
-- Starship のインストール
+- Starship のインストール (ユーザースコープ)
 - UDEV Gothic 35NFLG フォントのダウンロード・インストール
 - VS Code 拡張機能のインストール (Catppuccin, Error Lens 等)
-- シンボリックリンクの作成
+- 設定ファイルの配置 (リンクまたはコピー)
 
 ### オプション
 

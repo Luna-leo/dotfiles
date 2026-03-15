@@ -1,11 +1,10 @@
-#Requires -RunAsAdministrator
 <#
 .SYNOPSIS
     dotfiles セットアップスクリプト
 .DESCRIPTION
     Starship, フォント, VS Code 拡張機能のインストールと
-    設定ファイルのシンボリックリンクを作成します。
-    管理者権限で実行してください。
+    設定ファイルのリンク/コピーを作成します。
+    管理者権限がなくても動作します。
 #>
 
 param(
@@ -24,7 +23,7 @@ if (-not $SkipInstall) {
     if (Get-Command starship -ErrorAction SilentlyContinue) {
         Write-Host "  Starship は既にインストール済みです" -ForegroundColor Green
     } else {
-        winget install --id Starship.Starship --accept-source-agreements --accept-package-agreements
+        winget install --id Starship.Starship --scope user --accept-source-agreements --accept-package-agreements
     }
 
     # ─── 2. フォント (UDEV Gothic 35NFLG) ───
@@ -77,9 +76,9 @@ if (-not $SkipInstall) {
     Write-Host "  拡張機能のインストール完了" -ForegroundColor Green
 }
 
-# ─── シンボリックリンク作成 ───
+# ─── 設定ファイルの配置 ───
 if (-not $SkipSymlinks) {
-    Write-Host "`nシンボリックリンクを作成中..." -ForegroundColor Yellow
+    Write-Host "`n設定ファイルを配置中..." -ForegroundColor Yellow
 
     $Links = @(
         @{
@@ -104,7 +103,7 @@ if (-not $SkipSymlinks) {
 
         if (Test-Path $Link.Target) {
             $Existing = Get-Item $Link.Target -Force
-            if ($Existing.LinkType -eq "SymbolicLink") {
+            if ($Existing.LinkType -eq "SymbolicLink" -or $Existing.LinkType -eq "HardLink") {
                 Write-Host "  既にリンク済み: $($Link.Target)" -ForegroundColor Green
                 continue
             }
@@ -114,8 +113,28 @@ if (-not $SkipSymlinks) {
             Write-Host "  バックアップ: $BackupPath" -ForegroundColor DarkYellow
         }
 
-        New-Item -ItemType SymbolicLink -Path $Link.Target -Target $Link.Source -Force | Out-Null
-        Write-Host "  リンク作成: $($Link.Target) -> $($Link.Source)" -ForegroundColor Green
+        # 3段階フォールバック: SymbolicLink → HardLink → Copy
+        $Linked = $false
+
+        # 1. シンボリックリンクを試行（管理者権限 or 開発者モードが必要）
+        try {
+            New-Item -ItemType SymbolicLink -Path $Link.Target -Target $Link.Source -Force -ErrorAction Stop | Out-Null
+            Write-Host "  シンボリックリンク: $($Link.Target) -> $($Link.Source)" -ForegroundColor Green
+            $Linked = $true
+        } catch {
+            # 2. ハードリンクを試行（管理者権限不要、同一ドライブ・ファイルのみ）
+            try {
+                New-Item -ItemType HardLink -Path $Link.Target -Target $Link.Source -Force -ErrorAction Stop | Out-Null
+                Write-Host "  ハードリンク: $($Link.Target) -> $($Link.Source)" -ForegroundColor Green
+                $Linked = $true
+            } catch {
+                # 3. コピーにフォールバック
+                Copy-Item -Path $Link.Source -Destination $Link.Target -Force
+                Write-Host "  コピー: $($Link.Target) <- $($Link.Source)" -ForegroundColor Yellow
+                Write-Host "    (リンク作成不可のため、コピーしました。更新時は再度 setup.ps1 を実行してください)" -ForegroundColor DarkYellow
+                $Linked = $true
+            }
+        }
     }
 }
 
