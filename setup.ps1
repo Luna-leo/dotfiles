@@ -67,7 +67,7 @@ if (-not $SkipInstall) {
         "oderwat.indent-rainbow"
         "usernamehw.errorlens"
         "naumovs.color-highlight"
-        "BrandonKirbyson.vscode-animations"
+        "s-nlf-fh.glassit"
     )
     foreach ($Ext in $Extensions) {
         Write-Host "  $Ext"

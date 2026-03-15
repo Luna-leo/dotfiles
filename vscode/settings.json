@@ -1,9 +1,6 @@
 {
   "git.autofetch": true,
   "github.copilot.nextEditSuggestions.enabled": true,
-  "vscode_custom_css.imports": [
-    "file:///c:/Users/morim/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
-  ],
 
   // === テーマ ===
   "workbench.colorTheme": "Catppuccin Mocha",
@@ -41,5 +38,32 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "outline",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.gpuAcceleration": "on"
+  "terminal.integrated.gpuAcceleration": "on",
+
+  // === 透け感 (Glassit) ===
+  "glassit.alpha": 230,
+
+  "workbench.colorCustomizations": {
+    "[Catppuccin Mocha]": {
+      "editor.background": "#1e1e2ed0",
+      "sideBar.background": "#181825c8",
+      "sideBarSectionHeader.background": "#181825c8",
+      "activityBar.background": "#11111bc8",
+      "titleBar.activeBackground": "#11111bc0",
+      "titleBar.inactiveBackground": "#11111bb0",
+      "tab.activeBackground": "#1e1e2ed0",
+      "tab.inactiveBackground": "#181825c0",
+      "editorGroupHeader.tabsBackground": "#181825c0",
+      "panel.background": "#1e1e2ec8",
+      "statusBar.background": "#11111bc0",
+      "statusBar.noFolderBackground": "#11111bc0",
+      "statusBar.debuggingBackground": "#11111bc0",
+      "terminal.background": "#1e1e2ec0",
+      "list.activeSelectionBackground": "#45475a80",
+      "list.hoverBackground": "#45475a60",
+      "editorWidget.background": "#181825e0",
+      "quickInput.background": "#181825e8",
+      "quickInputList.focusBackground": "#45475a80"
+    }
+  }
 }
