@@ -50,6 +50,8 @@
   "workbench.activityBar.location": "top",
   "window.commandCenter": true,
   "editor.stickyScroll.enabled": true,
+  "editor.colorDecorators": false,
+  "color-highlight.markerType": "dot-before",
 
   // === ブラケットペア（内蔵機能） ===
   "editor.bracketPairColorization.enabled": true,
