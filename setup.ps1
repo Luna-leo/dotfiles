@@ -87,10 +87,6 @@ if (-not $SkipSymlinks) {
             Target = "$env:USERPROFILE\.config\starship.toml"
         },
         @{
-            Source = "$DotfilesDir\git\.gitconfig"
-            Target = "$env:USERPROFILE\.gitconfig"
-        },
-        @{
             Source = "$DotfilesDir\vscode\settings.json"
             Target = "$env:APPDATA\Code\User\settings.json"
         },
