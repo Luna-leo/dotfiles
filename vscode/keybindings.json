@@ -1,6 +1,6 @@
 [
   {
     "key": "ctrl+alt+t",
-    "command": "workbench.action.toggleLightDarkThemes"
+    "command": "settings.cycle.toggleTheme"
   }
 ]

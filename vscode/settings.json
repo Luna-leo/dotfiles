@@ -9,6 +9,24 @@
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
   "workbench.iconTheme": "catppuccin-mocha",
 
+  // === テーマ切替 (Ctrl+Alt+T で Dark ⇔ Light を一括トグル) ===
+  "settings.cycle": [
+    {
+      "id": "toggleTheme",
+      "overrideWorkspaceSettings": false,
+      "values": [
+        {
+          "workbench.colorTheme": "Tokyo Night",
+          "workbench.iconTheme": "catppuccin-mocha"
+        },
+        {
+          "workbench.colorTheme": "Tokyo Night Light",
+          "workbench.iconTheme": "catppuccin-latte"
+        }
+      ]
+    }
+  ],
+
   // === フォント ===
   "editor.fontFamily": "'UDEV Gothic 35NFLG', 'JetBrains Mono', Consolas, monospace",
   "editor.fontSize": 14,

@@ -65,6 +65,7 @@ if (-not $SkipInstall) {
         "enkia.tokyo-night"
         "Catppuccin.catppuccin-vsc"
         "Catppuccin.catppuccin-vsc-icons"
+        "hoovercj.vscode-settings-cycler"
         "oderwat.indent-rainbow"
         "usernamehw.errorlens"
         "naumovs.color-highlight"
