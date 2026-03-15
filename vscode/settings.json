@@ -3,9 +3,9 @@
   "github.copilot.nextEditSuggestions.enabled": true,
 
   // === テーマ（OS のダーク/ライトモードに連動 + Ctrl+K Ctrl+T で手動切替） ===
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Tokyo Night Storm",
   "window.autoDetectColorScheme": false,
-  "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
   "workbench.iconTheme": "catppuccin-mocha",
 
@@ -16,7 +16,7 @@
       "overrideWorkspaceSettings": false,
       "values": [
         {
-          "workbench.colorTheme": "Tokyo Night",
+          "workbench.colorTheme": "Tokyo Night Storm",
           "workbench.iconTheme": "catppuccin-mocha"
         },
         {
@@ -86,26 +86,26 @@
       "quickInput.background": "#cbccd1f6",
       "quickInputList.focusBackground": "#b6b7bca0"
     },
-    "[Tokyo Night]": {
-      "editor.background": "#1a1b2cd0",
-      "sideBar.background": "#16172ac8",
-      "sideBarSectionHeader.background": "#16172ac8",
-      "activityBar.background": "#13141fc8",
-      "titleBar.activeBackground": "#13141fc0",
-      "titleBar.inactiveBackground": "#13141fb0",
-      "tab.activeBackground": "#1a1b2cd0",
-      "tab.inactiveBackground": "#16172ac0",
-      "editorGroupHeader.tabsBackground": "#16172ac0",
-      "panel.background": "#1a1b2cc8",
-      "statusBar.background": "#13141fc0",
-      "statusBar.noFolderBackground": "#13141fc0",
-      "statusBar.debuggingBackground": "#13141fc0",
-      "terminal.background": "#1a1b2cc0",
-      "list.activeSelectionBackground": "#29294280",
-      "list.hoverBackground": "#29294260",
-      "editorWidget.background": "#16172ae0",
-      "quickInput.background": "#16172ae8",
-      "quickInputList.focusBackground": "#29294280"
+    "[Tokyo Night Storm]": {
+      "editor.background": "#1e2232e8",
+      "sideBar.background": "#191d2ce0",
+      "sideBarSectionHeader.background": "#191d2ce0",
+      "activityBar.background": "#151826e0",
+      "titleBar.activeBackground": "#151826d8",
+      "titleBar.inactiveBackground": "#151826c8",
+      "tab.activeBackground": "#1e2232e8",
+      "tab.inactiveBackground": "#191d2cd8",
+      "editorGroupHeader.tabsBackground": "#191d2cd8",
+      "panel.background": "#1e2232e0",
+      "statusBar.background": "#151826d8",
+      "statusBar.noFolderBackground": "#151826d8",
+      "statusBar.debuggingBackground": "#151826d8",
+      "terminal.background": "#1e2232d8",
+      "list.activeSelectionBackground": "#262c4198",
+      "list.hoverBackground": "#262c4178",
+      "editorWidget.background": "#191d2cf0",
+      "quickInput.background": "#191d2cf4",
+      "quickInputList.focusBackground": "#262c4198"
     }
   }
 }
