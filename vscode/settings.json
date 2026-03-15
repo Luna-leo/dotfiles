@@ -2,8 +2,11 @@
   "git.autofetch": true,
   "github.copilot.nextEditSuggestions.enabled": true,
 
-  // === テーマ ===
-  "workbench.colorTheme": "Catppuccin Mocha",
+  // === テーマ（OS のダーク/ライトモードに連動 + Ctrl+K Ctrl+T で手動切替） ===
+  "workbench.colorTheme": "Tokyo Night",
+  "window.autoDetectColorScheme": false,
+  "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "workbench.preferredLightColorTheme": "Tokyo Night Light",
   "workbench.iconTheme": "catppuccin-mocha",
 
   // === フォント ===
@@ -37,33 +40,54 @@
   // === ターミナル見た目 ===
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "outline",
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.gpuAcceleration": "on",
 
   // === 透け感 (Glassit) ===
-  "glassit.alpha": 230,
+  "glassit.alpha": 250,
 
   "workbench.colorCustomizations": {
-    "[Catppuccin Mocha]": {
-      "editor.background": "#1e1e2ed0",
-      "sideBar.background": "#181825c8",
-      "sideBarSectionHeader.background": "#181825c8",
-      "activityBar.background": "#11111bc8",
-      "titleBar.activeBackground": "#11111bc0",
-      "titleBar.inactiveBackground": "#11111bb0",
-      "tab.activeBackground": "#1e1e2ed0",
-      "tab.inactiveBackground": "#181825c0",
-      "editorGroupHeader.tabsBackground": "#181825c0",
-      "panel.background": "#1e1e2ec8",
-      "statusBar.background": "#11111bc0",
-      "statusBar.noFolderBackground": "#11111bc0",
-      "statusBar.debuggingBackground": "#11111bc0",
-      "terminal.background": "#1e1e2ec0",
-      "list.activeSelectionBackground": "#45475a80",
-      "list.hoverBackground": "#45475a60",
-      "editorWidget.background": "#181825e0",
-      "quickInput.background": "#181825e8",
-      "quickInputList.focusBackground": "#45475a80"
+    "[Tokyo Night Light]": {
+      "editor.background": "#d5d6dbf0",
+      "sideBar.background": "#cbccd1ec",
+      "sideBarSectionHeader.background": "#cbccd1ec",
+      "activityBar.background": "#c4c5caec",
+      "titleBar.activeBackground": "#c4c5cae8",
+      "titleBar.inactiveBackground": "#c4c5cae0",
+      "tab.activeBackground": "#d5d6dbf0",
+      "tab.inactiveBackground": "#cbccd1e8",
+      "editorGroupHeader.tabsBackground": "#cbccd1e8",
+      "panel.background": "#d5d6dbec",
+      "statusBar.background": "#c4c5cae8",
+      "statusBar.noFolderBackground": "#c4c5cae8",
+      "statusBar.debuggingBackground": "#c4c5cae8",
+      "terminal.background": "#d5d6dbec",
+      "list.activeSelectionBackground": "#b6b7bca0",
+      "list.hoverBackground": "#b6b7bc80",
+      "editorWidget.background": "#cbccd1f4",
+      "quickInput.background": "#cbccd1f6",
+      "quickInputList.focusBackground": "#b6b7bca0"
+    },
+    "[Tokyo Night]": {
+      "editor.background": "#1a1b2cd0",
+      "sideBar.background": "#16172ac8",
+      "sideBarSectionHeader.background": "#16172ac8",
+      "activityBar.background": "#13141fc8",
+      "titleBar.activeBackground": "#13141fc0",
+      "titleBar.inactiveBackground": "#13141fb0",
+      "tab.activeBackground": "#1a1b2cd0",
+      "tab.inactiveBackground": "#16172ac0",
+      "editorGroupHeader.tabsBackground": "#16172ac0",
+      "panel.background": "#1a1b2cc8",
+      "statusBar.background": "#13141fc0",
+      "statusBar.noFolderBackground": "#13141fc0",
+      "statusBar.debuggingBackground": "#13141fc0",
+      "terminal.background": "#1a1b2cc0",
+      "list.activeSelectionBackground": "#29294280",
+      "list.hoverBackground": "#29294260",
+      "editorWidget.background": "#16172ae0",
+      "quickInput.background": "#16172ae8",
+      "quickInputList.focusBackground": "#29294280"
     }
   }
 }

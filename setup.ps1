@@ -62,6 +62,7 @@ if (-not $SkipInstall) {
     # ─── 3. VS Code 拡張機能 ───
     Write-Host "`n[3/3] VS Code 拡張機能をインストール中..." -ForegroundColor Yellow
     $Extensions = @(
+        "enkia.tokyo-night"
         "Catppuccin.catppuccin-vsc"
         "Catppuccin.catppuccin-vsc-icons"
         "oderwat.indent-rainbow"
@@ -90,8 +91,20 @@ if (-not $SkipSymlinks) {
             Target = "$env:APPDATA\Code\User\settings.json"
         },
         @{
+            Source = "$DotfilesDir\vscode\keybindings.json"
+            Target = "$env:APPDATA\Code\User\keybindings.json"
+        },
+        @{
             Source = "$DotfilesDir\powershell\Microsoft.PowerShell_profile.ps1"
             Target = $PROFILE
+        },
+        @{
+            Source = "$DotfilesDir\bash\.bashrc"
+            Target = "$env:USERPROFILE\.bashrc"
+        },
+        @{
+            Source = "$DotfilesDir\windows-terminal\settings.json"
+            Target = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
         }
     )
 
