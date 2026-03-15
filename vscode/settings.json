@@ -1,0 +1,45 @@
+{
+  "git.autofetch": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "vscode_custom_css.imports": [
+    "file:///c:/Users/morim/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
+
+  // === テーマ ===
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
+
+  // === フォント ===
+  "editor.fontFamily": "'UDEV Gothic 35NFLG', 'JetBrains Mono', Consolas, monospace",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "'UDEV Gothic 35NFLG', 'JetBrainsMono Nerd Font', monospace",
+  "terminal.integrated.fontSize": 13,
+
+  // === スムーズアニメーション ===
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+
+  // === ミニマルUI ===
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "gutter",
+  "breadcrumbs.enabled": false,
+  "workbench.activityBar.location": "top",
+  "window.commandCenter": true,
+  "editor.stickyScroll.enabled": true,
+
+  // === ブラケットペア（内蔵機能） ===
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+
+  // === ターミナル見た目 ===
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorStyleInactive": "outline",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.gpuAcceleration": "on"
+}

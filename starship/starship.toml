@@ -1,0 +1,70 @@
+# Catppuccin Mocha グラデーションプロンプト
+format = """
+[](color_bg1)\
+$os\
+$username\
+[](bg:color_bg2 fg:color_bg1)\
+$directory\
+[](fg:color_bg2 bg:color_bg3)\
+$git_branch\
+$git_status\
+[](fg:color_bg3 bg:color_bg4)\
+$nodejs\
+$python\
+$rust\
+[](fg:color_bg4)\
+$character"""
+
+palette = 'catppuccin_mocha'
+
+[palettes.catppuccin_mocha]
+color_fg0 = '#1e1e2e'
+color_bg1 = '#f5c2e7'
+color_bg2 = '#cba6f7'
+color_bg3 = '#89b4fa'
+color_bg4 = '#a6e3a1'
+
+[os]
+disabled = false
+style = "bg:color_bg1 fg:color_fg0"
+
+[os.symbols]
+Windows = "󰍲"
+
+[username]
+show_always = true
+style_user = "bg:color_bg1 fg:color_fg0"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:color_fg0 bg:color_bg2"
+format = "[ $path ]($style)"
+truncation_length = 3
+
+[git_branch]
+symbol = ""
+style = "bg:color_bg3 fg:color_fg0"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:color_bg3 fg:color_fg0"
+format = '[$all_status$ahead_behind ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color_bg4 fg:color_fg0"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_bg4 fg:color_fg0"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color_bg4 fg:color_fg0"
+format = '[ $symbol ($version) ]($style)'
+
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
