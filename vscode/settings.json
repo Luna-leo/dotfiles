@@ -1,113 +1,82 @@
 {
-  "git.autofetch": true,
-  "github.copilot.nextEditSuggestions.enabled": true,
-
-  // === テーマ（OS のダーク/ライトモードに連動 + Ctrl+K Ctrl+T で手動切替） ===
-  "workbench.colorTheme": "Tokyo Night Storm",
-  "window.autoDetectColorScheme": false,
-  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
-  "workbench.preferredLightColorTheme": "Tokyo Night Light",
+  // === テーマ・アイコン ===
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "catppuccin-mocha",
+  "catppuccin-icons.hidesExplorerArrows": true,
 
-  // === テーマ切替 (Ctrl+Alt+T で Dark ⇔ Light を一括トグル) ===
-  "settings.cycle": [
-    {
-      "id": "toggleTheme",
-      "overrideWorkspaceSettings": false,
-      "values": [
-        {
-          "workbench.colorTheme": "Tokyo Night Storm",
-          "workbench.iconTheme": "catppuccin-mocha"
-        },
-        {
-          "workbench.colorTheme": "Tokyo Night Light",
-          "workbench.iconTheme": "catppuccin-latte"
-        }
-      ]
-    }
-  ],
+  // === ウィンドウ ===
+  "window.zoomLevel": 2,
+  "window.titleBarStyle": "custom",
+  "window.customTitleBarVisibility": "never",
+  "window.commandCenter": true,
+  "window.menuBarVisibility": "toggle",
 
-  // === フォント ===
-  "editor.fontFamily": "'UDEV Gothic 35NFLG', 'JetBrains Mono', Consolas, monospace",
-  "editor.fontSize": 14,
-  "editor.fontLigatures": true,
-  "terminal.integrated.fontFamily": "'UDEV Gothic 35NFLG', 'JetBrainsMono Nerd Font', monospace",
-  "terminal.integrated.fontSize": 13,
-
-  // === スムーズアニメーション ===
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.smoothScrolling": true,
+  // === ワークベンチ UI ===
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.showTabs": "single",
+  "workbench.statusBar.visible": false,
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
   "workbench.list.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 10,
 
-  // === ミニマルUI ===
+  // === エクスプローラー ===
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.decorations.badges": false,
+  "breadcrumbs.enabled": false,
+
+  // === エディター表示 ===
+  "editor.lineNumbers": "relative",
+  "editor.lineHeight": 2,
   "editor.minimap.enabled": false,
   "editor.scrollbar.vertical": "hidden",
   "editor.overviewRulerBorder": false,
   "editor.renderLineHighlight": "gutter",
-  "breadcrumbs.enabled": false,
-  "workbench.activityBar.location": "top",
-  "window.commandCenter": true,
   "editor.stickyScroll.enabled": true,
   "editor.colorDecorators": false,
-  "color-highlight.markerType": "dot-before",
 
-  // === ブラケットペア（内蔵機能） ===
+  // === エディター動作 ===
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+
+  // === フォント ===
+  "editor.fontFamily": "'UDEV Gothic 35NFLG', 'JetBrains Mono', Consolas, monospace",
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true,
+
+  // === アニメーション ===
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+
+  // === ブラケットペア ===
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
 
-  // === ターミナル見た目 ===
+  // === ファイル ===
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // === Git / SCM ===
+  "git.decorations.enabled": false,
+  "scm.diffDecorations": "all",
+
+  // === ターミナル ===
+  "terminal.integrated.fontFamily": "'UDEV Gothic 35NFLG', 'JetBrainsMono Nerd Font', monospace",
+  "terminal.integrated.fontSize": 13,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "outline",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.smoothScrolling": true,
+  "workbench.panel.showLabels": false,
 
-  // === 透け感 (Glassit) ===
-  "glassit.alpha": 250,
-
-  "workbench.colorCustomizations": {
-    "[Tokyo Night Light]": {
-      "editor.background": "#d5d6dbf0",
-      "sideBar.background": "#cbccd1ec",
-      "sideBarSectionHeader.background": "#cbccd1ec",
-      "activityBar.background": "#c4c5caec",
-      "titleBar.activeBackground": "#c4c5cae8",
-      "titleBar.inactiveBackground": "#c4c5cae0",
-      "tab.activeBackground": "#d5d6dbf0",
-      "tab.inactiveBackground": "#cbccd1e8",
-      "editorGroupHeader.tabsBackground": "#cbccd1e8",
-      "panel.background": "#d5d6dbec",
-      "statusBar.background": "#c4c5cae8",
-      "statusBar.noFolderBackground": "#c4c5cae8",
-      "statusBar.debuggingBackground": "#c4c5cae8",
-      "terminal.background": "#d5d6dbec",
-      "list.activeSelectionBackground": "#b6b7bca0",
-      "list.hoverBackground": "#b6b7bc80",
-      "editorWidget.background": "#cbccd1f4",
-      "quickInput.background": "#cbccd1f6",
-      "quickInputList.focusBackground": "#b6b7bca0"
-    },
-    "[Tokyo Night Storm]": {
-      "editor.background": "#1e2232e8",
-      "sideBar.background": "#191d2ce0",
-      "sideBarSectionHeader.background": "#191d2ce0",
-      "activityBar.background": "#151826e0",
-      "titleBar.activeBackground": "#151826d8",
-      "titleBar.inactiveBackground": "#151826c8",
-      "tab.activeBackground": "#1e2232e8",
-      "tab.inactiveBackground": "#191d2cd8",
-      "editorGroupHeader.tabsBackground": "#191d2cd8",
-      "panel.background": "#1e2232e0",
-      "statusBar.background": "#151826d8",
-      "statusBar.noFolderBackground": "#151826d8",
-      "statusBar.debuggingBackground": "#151826d8",
-      "terminal.background": "#1e2232d8",
-      "list.activeSelectionBackground": "#262c4198",
-      "list.hoverBackground": "#262c4178",
-      "editorWidget.background": "#191d2cf0",
-      "quickInput.background": "#191d2cf4",
-      "quickInputList.focusBackground": "#262c4198"
-    }
-  }
+  // === 拡張機能 ===
+  "color-highlight.markerType": "dot-before",
+  "claudeCode.preferredLocation": "panel",
 }
